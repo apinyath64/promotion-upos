@@ -4,8 +4,10 @@ import Components from 'unplugin-vue-components/vite'
 import path from 'path'
 
 export default defineConfig({
-  base: '/promotion-upos/',  
+  // base: '/promotion-upos/',  
 
+  base: process.env.VITE_BASE_PATH || '/',
+  
   plugins: [
     vue(),
     Components({
